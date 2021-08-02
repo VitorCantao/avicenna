@@ -46,10 +46,10 @@
             {{ $links := $page.Params.links }}
             {{ if $links }}
             <div class="section-3  w-100">
-                {{range $link_name, $link_url := $links}}
-                    {{ if $link_url }}
-                <a class="main_color text-decoration-none rounded" href="{{$link_url}}" target="_blank">
-                    {{$link_name}}
+                {{range $item := $links}}
+                    {{ if $item.link.url }}
+                <a class="main_color text-decoration-none rounded" href="{{$item.link.url}}" target="_blank">
+                    {{$item.link.name}}
                 </a>
                     {{end}}
                 {{end}}
