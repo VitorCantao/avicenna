@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 {{ $headlessPage := .Site.GetPage "/home" }}
 
 {{ range where ($headlessPage.Resources.ByType "page") "Params.section_settings.show_section" true}}
