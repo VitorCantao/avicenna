@@ -44,6 +44,7 @@
         {{ $twitch := index $aboutPage.Params.socials "twitch"}}
         {{ $github := index $aboutPage.Params.socials "github"}}
         {{ $linkedin := index $aboutPage.Params.socials "linkedin"}}
+        {{ $lattes := index $aboutPage.Params.socials "lattes"}}
         {{ $cv := $aboutPage.Params.cv }}
         {{ $blog := $aboutPage.Params.blog}}
 
@@ -75,6 +76,12 @@
         {{ if $linkedin }}
         <a class="main_color" rel="me" href='https://linkedin.com/in/{{$linkedin}}' target="_blank">
             <i data-feather="linkedin"></i>
+        </a>
+        {{end}}
+
+        {{ if $lattes }}
+        <a class="main_color" rel="me" href='https://lattes.cnpq.br/{{$lattes}}' target="_blank">
+            <i class="ai ai-2x ai-lattes academic_icons_customize"></i>
         </a>
         {{end}}
 
